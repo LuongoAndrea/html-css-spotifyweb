@@ -5,32 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
     <title>Spotify</title>
 </head>
 <body>
     <div class="wrapper">
         <main>
-            <nav class="padding">
-                <!-- logo -->
-                <div class="logo padding-bottom">
-                    <img class="padding-bottom" src="./img/logo.svg" alt="">
-                </div>
-                <!-- home -->
-                <div class="padding-bottom">
-                    <img class="icon-nav" src="./img/home.svg" alt="">
-                    <span class="text-capitalize color-white">home</span>
-                </div>
-                <!-- cerca -->
-                <div class="padding-bottom">
-                    <img class="icon-nav" src="./img/search.svg" alt="">
-                    <span class="text-capitalize color-white">home</span>
-                </div>
-                <!-- librerie -->
-                <div class="padding-bottom">
-                    <img class="icon-nav" src="./img/libreria.svg" alt="">
-                    <span class="text-capitalize color-white">home</span>
-                </div>
+            <nav class="padding position-relative">
+                <section class="padding-bottom">
+                    <!-- logo -->
+                    <div class="logo padding-bottom">
+                        <img class="padding-bottom" src="./img/logo.svg" alt="">
+                    </div>
+                    <!-- home -->
+                    <div class="padding-bottom flexer align-center">
+                        <img class="icon-nav" src="./img/home.svg" alt="">
+                        <div class="padding-left">
+                            <span><a class="text-capitalize color-white" href="#">home</a></span>
+                        </div>
+                    </div>
+                    <!-- cerca -->
+                    <div class="padding-bottom flexer align-center">
+                        <img class="icon-nav" src="./img/search.svg" alt="">
+                        <div class="padding-left">
+                            <span><a class="text-capitalize color-white" href="#">cerca</a></span>
+                        </div>
+                    </div>
+                    <!-- librerie -->
+                    <div class="padding-bottom flexer align-center">
+                        <img class="icon-nav" src="./img/libreria.svg" alt="">
+                        <div class="padding-left">
+                            <span><a class="text-capitalize color-white" href="#">La tua libreria</a></span>
+                        </div>
+                    </div>
+                </section>
+                <!-- section play list -->
+                <section id="playlist">
+                    <div class="padding-bottom">
+                        <span class="size-second-title text-uppercase color-white strong">playlist</span>
+                    </div>
+                    <!-- ul playlist -->
+                    <ul><div class="padding-bottom flexer align-center">
+                            <div class="background-gray position-relative">
+                                <span class="centratura position-absolute"><i class="size-second-title fa-solid fa-plus"></i></span>
+                            </div>
+                        <span class="text-capitalize color-font-gray padding-left">crea playlist</span>
+                        </div>
+                        <li class="padding-bottom text-capitalize"><a class="color-font-gray size-small" href="#">nome playlist</a></li>
+                        <li class="padding-bottom text-capitalize"><a class="color-font-gray size-small" href="#">nome playlist</a></li>
+                        <li class="padding-bottom text-capitalize"><a class="color-font-gray size-small" href="#">nome playlist</a></li>
+                        <li class="padding-bottom text-capitalize"><a class="color-font-gray size-small" href="#">nome playlist</a></li>
+                        <li class="padding-bottom text-capitalize"><a class="color-font-gray size-small" href="#">nome playlist</a></li>
+                        <li class="padding-bottom text-capitalize"><a class="color-font-gray size-small" href="#">nome playlist</a></li>
+                        <li class="padding-bottom text-capitalize"><a class="color-font-gray size-small" href="#">nome playlist</a></li>
+                    </ul>
+                </section>
+                <section id="user" class="position-absolute">
+                    <div class="padding-bottom flexer align-center">
+                        <img src="./img/download.svg" alt="">
+                        <span class="text-capitalize color-font-gray padding-left">installa app</span>
+                    </div>
+                    <hr class="color-font-gray">
+                    <div class="padding-bottom padding-top">
+                        <div class="inline">
+                            <img src="./img/profile.svg" alt="">
+                        </div>
+                        <span class="size-second-title text-uppercase color-white strong padding-left">donh joe</span>
+                    </div>
+                </section>
             </nav>
             <div class="main-content">
                 <aside>
