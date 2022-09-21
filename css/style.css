@@ -14,6 +14,8 @@
     --black-main: #141922;
     --black-nav: #000000;
     --black-plybar: #282828;
+    --time-bar-background: #5A5A5A;
+    --time-bar-color: #C1C1C1;
 }
 /* UTILITY */
 .wrapper{
@@ -58,6 +60,9 @@ li{
 .strong{
     font-weight: bold;
 }
+.text-center{
+    text-align: center;
+}
                                             /* position */
 .position-relative{
     position: relative;
@@ -75,16 +80,36 @@ li{
 .inline{
     display: inline;
 }
+.block{
+    display: block;
+}
+
+                                            /* div cerchio */
+.div-rotondo{
+    border-radius: 50%;
+    overflow: hidden;
+}
                                             /* flex */
 .flexer{
     display: flex;
-    
+}
+.direction-column{
+    flex-direction: column;
 }
 .justify-between{
     justify-content: space-between;
 }
+.justify-around{
+    justify-content: space-around;
+}
+.justify-center{
+    justify-content: center;
+}
 .align-center{
     align-items: center;
+}
+.wrap{
+    flex-wrap: wrap;
 }
 
 /* scrool bar */
@@ -108,6 +133,10 @@ border-radius: 10px;
     text-transform: capitalize;
 }
 
+                                            /* width calc */
+.width-calc{
+    width: calc(100% / 6);
+}
                                             /* padding */
 .padding{
     padding: 1.5rem;
@@ -119,8 +148,30 @@ border-radius: 10px;
     padding-bottom: 1rem;
 }
 .padding-left{
+    padding-left: 1rem;
+}
+.padding-right{
+    padding-right: 1rem;
+}
+.padding-small{
+    padding: 1rem;
+}
+.padding-top-small{
+    padding-top: 0.5rem;
+}
+.padding-bottom-small{
+    padding-bottom: 0.5rem;
+}
+.padding-left-small{
     padding-left: 0.5rem;
 }
+.padding-right-small{
+    padding-right: 0.5rem;
+}
+
+
+
+
 
 /* main */
 main{
@@ -139,23 +190,33 @@ main{
     overflow-y: scroll;
     overflow-x: hidden;
     height: 100%;
+    padding-top: 95px;
+}
+div.green-bar{
+    width: 2.5rem;
+    height: 0.25rem;
+    background-color: var(--green);
+    left: 2rem;
+    top: 0.5rem;
+}
+div.card div.foto, div.card div.foto img{
+    width: 11rem;
+    height: 11rem;
+}
+.titoli-card{
+    max-width: 11rem;
 }
 
-/* play bar  */
-.playbar{
-    width: 100%;
-    height: 95px;
-    background-color: var(--black-plybar);
-    position: fixed;
-    bottom: 0;
-    z-index: 1000;
-}
+
+
+
 
 /* nav  */
 nav{
     width: 230px;
     height: 100%;
     background-color: var(--black-nav);
+    min-height: 700px;
 }
 #playlist div.background-gray{
     width: 2.2rem;
@@ -165,7 +226,6 @@ nav{
     top: 50%;
     left: 50%;
 }
-
 /* immagine logo  */
 .logo{
     width: 8.5rem;
@@ -180,9 +240,13 @@ nav{
 #user div img:first-of-type{
     width: 1rem;
 }
-#user div:last-of-type{
-    
-}
+/* #user div div{
+    width: 1.6rem;
+    height: 1.6rem;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: var(--gray);
+} */
 /* aside */
 aside{
     width: 100%;
@@ -209,4 +273,42 @@ aside{
     right: 8rem;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+/* play bar  */
+.playbar{
+    width: 100%;
+    height: 95px;
+    background-color: var(--black-plybar);
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+}
+footer div.songbar img{
+    width: 3rem;
+    height: 3rem;
+}
+footer div.player .time-bar{
+    background-color: var(--time-bar-background);
+    width: 29.75rem;
+    height: 0.25rem;
+    border-radius: 1rem;
+}
+footer div.player .time-bar-color{
+    background-color: var(--time-bar-color);
+    width: 5.25rem;
+    height: 0.25rem;
+    border-radius: 1rem;
+}
+footer div.volume .time-bar{
+    background-color: var(--time-bar-background);
+    width: 7.5rem;
+    height: 0.25rem;
+    border-radius: 1rem;
+}
+footer div.volume .time-bar-color{
+    background-color: var(--time-bar-color);
+    width: 1.56rem;
+    height: 0.25rem;
+    border-radius: 1rem;
 }
