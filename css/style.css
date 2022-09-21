@@ -317,6 +317,10 @@ footer div.volume .time-bar-color{
     border-radius: 1rem;
 }
 
+
+/* DA GUARDARE */
+
+
 /* media query 700px */
 @media screen and (max-width: 1200px) {
     .width-calc{
