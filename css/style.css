@@ -227,8 +227,12 @@ nav{
     left: 50%;
 }
 /* immagine logo  */
-.logo{
+.logo-desktop{
     width: 8.5rem;
+}
+.logo-mobile{
+    width: 1.5rem;
+    display: none;
 }
 .icon-nav{
     width: 1.5rem;
@@ -312,3 +316,54 @@ footer div.volume .time-bar-color{
     height: 0.25rem;
     border-radius: 1rem;
 }
+
+/* media query 700px */
+@media screen and (max-width: 1200px) {
+    .width-calc{
+        width: calc(100% / 4);
+    }
+    div.card div.foto, div.card div.foto img{
+        width: 8.68rem;
+        height: 8.68rem;
+    }
+    .titoli-card{
+        max-width: 8.68rem;
+    }
+
+}
+/* media query 600px */
+@media screen and (max-width: 700px) {
+    .width-calc{
+        width: calc(100% / 2);
+    }
+    nav{
+        width: 5.5rem;
+    }
+    .logo-desktop{
+        display: none;
+    }
+    .logo-mobile{
+        display: block;
+        width: 1.5rem;
+    }
+    nav span{
+        display: none;
+    }
+    #playlist{
+        display: none;
+    }
+    nav hr{
+        width: 1.5rem;
+    }
+    .main-content{
+        width: calc(100% - 5.5rem);
+    }
+    footer .volume{
+        display: none;
+    }
+}
+/* media query 500px */
+@media screen and (max-width: 600px) {
+    
+}
+  
