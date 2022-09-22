@@ -168,7 +168,9 @@ border-radius: 10px;
 .padding-right-small{
     padding-right: 0.5rem;
 }
-
+.margin-right{
+    margin-right: 2rem;
+}
 
 
 
@@ -199,12 +201,15 @@ div.green-bar{
     left: 2rem;
     top: 0.5rem;
 }
+div.card{
+    width: calc(100% / 6);
+}
 div.card div.foto, div.card div.foto img{
-    width: 11rem;
-    height: 11rem;
+    width: calc(100% - 2rem);
 }
 .titoli-card{
-    max-width: 11rem;
+    width: calc(100% - 2rem);
+    padding-bottom: 1rem;
 }
 
 
@@ -216,7 +221,7 @@ nav{
     width: 230px;
     height: 100%;
     background-color: var(--black-nav);
-    min-height: 700px;
+    min-height: 670px;
 }
 #playlist div.background-gray{
     width: 2.2rem;
@@ -225,6 +230,9 @@ nav{
 #playlist div.background-gray span{
     top: 50%;
     left: 50%;
+}
+section#playlit ul{
+    min-height: 200px;
 }
 /* immagine logo  */
 .logo-desktop{
@@ -294,51 +302,58 @@ footer div.songbar img{
 }
 footer div.player .time-bar{
     background-color: var(--time-bar-background);
-    width: 29.75rem;
+    width: 29.75vw;
     height: 0.25rem;
     border-radius: 1rem;
 }
 footer div.player .time-bar-color{
     background-color: var(--time-bar-color);
-    width: 5.25rem;
+    width: 5.25vw;
     height: 0.25rem;
     border-radius: 1rem;
 }
 footer div.volume .time-bar{
     background-color: var(--time-bar-background);
-    width: 7.5rem;
+    width: 7.5vw;
     height: 0.25rem;
     border-radius: 1rem;
 }
 footer div.volume .time-bar-color{
     background-color: var(--time-bar-color);
-    width: 1.56rem;
+    width: 1.56vw;
     height: 0.25rem;
     border-radius: 1rem;
 }
 
 
-/* DA GUARDARE */
-
-
-/* media query 700px */
 @media screen and (max-width: 1200px) {
-    .width-calc{
+    div.card{
         width: calc(100% / 4);
     }
-    div.card div.foto, div.card div.foto img{
-        width: 8.68rem;
-        height: 8.68rem;
-    }
-    .titoli-card{
-        max-width: 8.68rem;
-    }
-
 }
-/* media query 600px */
-@media screen and (max-width: 700px) {
-    .width-calc{
+@media screen and (max-width: 992px) {
+    div.card{
+        width: calc(100% / 3);
+    }
+}
+@media screen and (max-width: 768px) {
+    div.card{
         width: calc(100% / 2);
+    }
+}
+
+@media screen and (max-width: 575px) {
+    div.card{
+        width: calc(100% / 2);
+    }
+    .btn{
+        padding: 0.5rem 1rem;
+        background-color: var(--black-nav);
+        color: var(--white);
+        border: 1px solid var(--white);
+        border-radius: 2rem;
+        cursor: pointer;
+        transition: padding 0.5s;
     }
     nav{
         width: 5.5rem;
@@ -365,9 +380,21 @@ footer div.volume .time-bar-color{
     footer .volume{
         display: none;
     }
+    .btn{
+        padding: 0.5rem 1rem;
+        background-color: var(--black-nav);
+        color: var(--white);
+        border: 1px solid var(--white);
+        border-radius: 2rem;
+        cursor: pointer;
+        transition: padding 0.5s;
+        right: 2rem;
+    }
 }
-/* media query 500px */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
+    div.card{
+        width: calc(100% / 1);
+    }
     
 }
   
