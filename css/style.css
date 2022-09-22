@@ -46,6 +46,7 @@ li{
 .background-gray{
     background-color: var(--grey);
 }
+                                            /* border */
 
                                             /* size font */
 .size-title{
@@ -204,15 +205,36 @@ div.green-bar{
 div.card{
     width: calc(100% / 6);
 }
-div.card div.foto, div.card div.foto img{
+div.card div.foto{
     width: calc(100% - 2rem);
 }
-.titoli-card{
-    width: calc(100% - 2rem);
-    padding: 0 2rem 1rem 0rem;
+div.card div.foto img{
+    width: 100%;
 }
-
-
+div.player-brano span i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-size: 40px;
+    display: none;
+}
+div.player-brano{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: none;
+}
+div.card div.foto:hover div.player-brano, div.player-brano span i{
+    display: block;
+    cursor: pointer;
+}
 
 
 
@@ -222,6 +244,9 @@ nav{
     height: 100%;
     background-color: var(--black-nav);
     min-height: 670px;
+}
+nav span:hover, a:hover{
+    color: var(--white);
 }
 #playlist div.background-gray{
     width: 2.2rem;
@@ -324,7 +349,27 @@ footer div.volume .time-bar-color{
     height: 0.25rem;
     border-radius: 1rem;
 }
-
+.time-bar-circle{
+    width: 10px;
+    height: 10px;
+    background-color: var(--white);
+    right: -5px;
+    top:2px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+}
+footer i:hover{
+    color: var(--white);
+    cursor: pointer;
+}
+footer .time-bar:hover .time-bar-color{
+    background-color: var(--green);
+}
+footer .time-bar:hover .time-bar-circle{
+    display: block;
+}
 
 @media screen and (max-width: 1200px) {
     div.card{
