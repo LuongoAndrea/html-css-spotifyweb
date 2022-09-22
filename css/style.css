@@ -209,7 +209,7 @@ div.card div.foto, div.card div.foto img{
 }
 .titoli-card{
     width: calc(100% - 2rem);
-    padding-bottom: 1rem;
+    padding: 0 2rem 1rem 0rem;
 }
 
 
